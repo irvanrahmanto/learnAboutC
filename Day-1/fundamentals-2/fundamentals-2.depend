@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1659430649 source:d:\c_programming_training_hacktive8\day-1\fundamentals-2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<float.h>
+
+1659421269 source:d:\c_programming_training_hacktive8\day-1\fundamentals-2\fundamentals-2-1.c
+

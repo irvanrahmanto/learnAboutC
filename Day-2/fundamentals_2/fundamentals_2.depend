@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1659502315 source:d:\c_programming_training_hacktive8\day-2\fundamentals_2\main.c
+	<stdio.h>
+	<stdlib.h>
+
