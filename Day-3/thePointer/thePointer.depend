@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1659599569 source:d:\c_programming_training_hacktive8\day-3\thepointer\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1659599551 source:d:\c_programming_training_hacktive8\day-3\thepointer\antriancallcenter.c
+	<stdio.h>
+	<stdlib.h>
+
