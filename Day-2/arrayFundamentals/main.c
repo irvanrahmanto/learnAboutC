@@ -92,8 +92,72 @@ void challangeMatrix(){
     }
 }
 
-void arrayMultiDimension(){
+void twoMatrixUsingOrdo(){
+    int matrixA[10][10];
+    int matrixB[10][10];
+    int i, j, baris, kolom;
+    printf("Masukkan baris matriks : ");
+    scanf("%d", &baris);
 
+    printf("Masukkan kolom matriks : ");
+    scanf("%d", &kolom);
+
+    printf("Masukkan data matriks A\n");
+    for (i = 1; i <= baris; i++)
+    {
+        for (j = 1; j <= kolom; j++)
+        {
+            printf("(%d , %d) :", i, j);
+            scanf("%d", &matrixA[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("Masukkan data matriks B \n");
+    for (i = 1; i <= baris; i++)
+    {
+        for (j = 1; j <= kolom; j++)
+        {
+            printf("(%d , %d) :", i, j);
+            scanf("%d", &matrixB[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("Matriks A\n");
+    for (i = 1; i <= baris; i++)
+    {
+        for (j = 1; j <= kolom; j++)
+        {
+            printf("%d ", matrixA[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\n");
+
+    printf("Matriks B\n");
+    for (i = 1; i <= baris; i++)
+    {
+        for (j = 1; j <= kolom; j++)
+        {
+            printf("%d ", matrixB[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\n");
+
+    printf("Proses penjumlahan Matriks A dan Matriks B  = \n");
+    for (i = 1; i <= baris; i++)
+    {
+        for (j = 1; j <= kolom; j++)
+        {
+            printf("(%d + %d) = %d\t", matrixA[i][j], matrixB[i][j], matrixA[i][j] + matrixB[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
 }
 
 int main()
@@ -101,7 +165,9 @@ int main()
     //exampleArr();
     //countArr();
     //arrayTwoDimension();
-    challangeMatrix();
+    //challangeMatrix();
+
+    twoMatrixUsingOrdo();
 
     return 0;
 }
