@@ -6,17 +6,19 @@ struct kegiatan{
     char activity[35];
     int tanggal;
     int bulan;
+    char note[20];
 
     struct kegiatan *next;
 }*head, *tail, *current;
 
-void thePushHead(char activity, int tanggal, int bulan){
+void thePushHead(char activity[], int tanggal, int bulan, char note[]){
     //alokasi memori data yang baru
     current = (struct kegiatan*) malloc(sizeof(struct kegiatan));
 
-    strcpy(current->activity, activity);
     current->tanggal = tanggal;
     current->bulan = bulan;
+    strcpy(current->activity, activity);
+    strcpy(current->note, note);
 
     if(head==NULL){
         head = tail = current;
@@ -53,8 +55,25 @@ void firstMenu(){
     char bulan;
     scanf("%d", &bulan);
 
-    printf("Push sukses, kegiatan berhasil ditambahkan!");
-    thePushHead(activity, tanggal, bulan);
+    char note;
+    char theNote[20];
+    do{
+        printf("Apakah anda ingin menambahkan note [y/n]: \n");
+        scanf("%c", &note);
+        if(note == 'Y' && note == 'y'){
+            printf("Masukkan note [3-25 char]: ");
+            scanf("%s", &theNote);
+        }else if(note == 'N' && note == 'n'){
+            strcpy(theNote ,"-");
+        }else{
+            printf("Invalid Data! \n");
+        }
+    }while((note != 'Y' && note != 'y') && (note != 'N' && note != 'n'));
+
+    thePushHead(activity, tanggal, bulan, note);
+    printf("Push sukses, kegiatan berhasil ditambahkan! \n");
+    printf("Tekan enter untuk melanjutkan... \n\n");
+    getchar();
 }
 
 void secondMenu(){
@@ -69,8 +88,10 @@ void thePrint(){
 	}
 }
 
+void theMenu(){
+    back:
+    //system("cls");
 
-void main(){
     printf("===========================\n");
     printf("      AGENDA ELEKTRONIC    \n");
     printf("===========================\n");
@@ -85,16 +106,33 @@ void main(){
     scanf("%d", &inpMenu);
 
     int i;
-    if(inpMenu == 1){
-        firstMenu();
 
-    }else if(inpMenu == 2){
-        secondMenu();
-    }else if(inpMenu == 3){
-        thePrint();
-    }else{
-        printf("Menu yang anda inputkan tidak tersedia! \n");
+
+    switch(inpMenu){
+        case 1:
+            firstMenu();
+            getchar();
+            goto back;
+            break;
+        case 2:
+            secondMenu();
+            getchar();
+            goto back;
+            break;
+        case 3:
+            thePrint();
+            getchar();
+            goto back;
+            break;
+        default:
+            printf("Wrong!");
+            goto back;
+            break;
     }
+}
+
+void main(){
+    theMenu();
 
     return 0;
 }
