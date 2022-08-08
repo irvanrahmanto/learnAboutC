@@ -1,0 +1,3 @@
+Alas segitiga : 20 cm 
+Tinggi segitiga: 7 cm 
+Luas segitiga dengan alas 20 cm dan tinggi 7 cm adalah: 70 cm2
