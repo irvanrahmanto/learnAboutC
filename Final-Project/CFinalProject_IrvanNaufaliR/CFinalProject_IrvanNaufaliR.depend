@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1660028442 source:d:\c_programming_training_hacktive8\final-project\cfinalproject_irvannaufalir\main.c
+1660117579 source:d:\c_programming_training_hacktive8\final-project\cfinalproject_irvannaufalir\main.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
 	<unistd.h>
 	<time.h>
+	<string.h>
 

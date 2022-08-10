@@ -4,7 +4,7 @@
 
 int main(void){
     int dividen=10;
-    int pembagi=0;
+    int pembagi=6;
     int hasil;
 
     if(pembagi==0){
